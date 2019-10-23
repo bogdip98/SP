@@ -1,23 +1,37 @@
+import java.awt.Color;
+import java.awt.Dimension;
+import java.util.concurrent.TimeUnit;
 
-public class Figura extends Components{
+import lombok.Value;
+
+@Value
+public class Figura extends Components implements Image{
+	private final Dimension dim;
 	private String caption;
-	private byte[][] image;
-	public Figura(String caption, byte[][] image) {
-		super();
-		this.caption = caption;
-		this.image = image;
+	private final Color[][] content;
+	public Figura(String s) throws InterruptedException {
+		caption=s;
+		content = decode();
+		dim = new Dimension(10,10);
 	}
-	public String getCaption() {
-		return caption;
+	public Color[][] decode() throws InterruptedException {
+		TimeUnit.SECONDS.sleep(5);
+		return new Color[5][5];
 	}
-	public void setCaption(String caption) {
-		this.caption = caption;
+	@Override
+	public Dimension dimension() {
+		// TODO Auto-generated method stub
+		return null;
 	}
-	public byte[][] getImage() {
-		return image;
+	@Override
+	public Color[][] content() {
+		// TODO Auto-generated method stub
+		return null;
 	}
-	public void setImage(byte[][] image) {
-		this.image = image;
+	@Override
+	public String caption() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 }

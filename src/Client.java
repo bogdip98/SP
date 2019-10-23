@@ -1,8 +1,8 @@
 import java.util.ArrayList;
 
 public class Client {
-	public static void main(String[] args) {
-		Autor a1 = new Autor("Popescu");
+	public static void main(String[] args) throws InterruptedException {
+		/*Autor a1 = new Autor("Popescu");
 		Autor a2 = new Autor("Ionescu");
 		Book book = new Book();
 		ArrayList<Autor> autori = new ArrayList<Autor>();
@@ -16,6 +16,14 @@ public class Client {
 		Sectiune s2 = book.createSection(s,"Title");
 		Book b = new Book();
 		b.setTitle("Titlu");
-		b.setIsbn("isbn");
+		b.setIsbn("isbn");*/
+		Components com = new Sectiune("C1");
+		com.Add(new Paragraf("Par1"));
+		com.Add(new ProxyFigure("Caption"));
+		com.print();
+		Components com2 = new Sectiune("C2");
+		com2.Add(new Paragraf("Par2"));
+		com2.Add(new Figura("Fig2"));
+		com2.print();
 	}
 }

@@ -1,24 +1,10 @@
 import java.awt.Font;
 
+import lombok.Value;
+
 public class Paragraf extends Components{
-	private String text;
-	private Font font;
-	public Paragraf(String text, Font font) {
-		super();
-		this.text = text;
-		this.font = font;
+	private String text;	
+	public Paragraf(String s) {
+		text=s;
 	}
-	public String getText() {
-		return text;
-	}
-	public void setText(String text) {
-		this.text = text;
-	}
-	public Font getFont() {
-		return font;
-	}
-	public void setFont(Font font) {
-		this.font = font;
-	}
-	
 }
